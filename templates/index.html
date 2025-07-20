@@ -32,8 +32,8 @@
                     <th scope="col">Time</th>
                 </tr>
             </thead>
+            {% for Todo in allTodos %}
             <tbody>
-                {% for Todo in allTodos %}
                 <tr>
                     <th scope="row">{{loop.index}}</th>
                     <td>{{Todo.title}}</td>
@@ -45,8 +45,8 @@
                             <a href="/delete/{{Todo.sno}}" type="button"
                                 class="btn btn-outline-danger btn-sm mx-2">Remove</button>
                 </tr>
-                {% endfor %}
             </tbody>
+            {% endfor %}
         </table>
         
         {% endif %}
